@@ -12,3 +12,8 @@ struct Meal: Codable {
     let strMealThumb: String
     let idMeal: String 
 }
+
+struct JSONReponse: Codable {
+    let meals: [Meal]
+}
+

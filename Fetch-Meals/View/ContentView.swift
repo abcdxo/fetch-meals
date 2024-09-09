@@ -8,12 +8,14 @@
 import SwiftUI
 
 struct ContentView: View {
+    @ObservedObject var mealViewModel = MealViewModel()
+    
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+            
+            List(mealViewModel.meals, id: \.idMeal) { meal in
+                Text(meal.strMeal)
+            }
         }
         .padding()
     }
