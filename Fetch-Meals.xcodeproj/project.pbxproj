@@ -12,6 +12,8 @@
 		B6FDF1622C8F6F2E0091D04F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B6FDF1612C8F6F2E0091D04F /* Assets.xcassets */; };
 		B6FDF1652C8F6F2E0091D04F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B6FDF1642C8F6F2E0091D04F /* Preview Assets.xcassets */; };
 		B6FDF16E2C8F70100091D04F /* Meal.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6FDF16D2C8F70100091D04F /* Meal.swift */; };
+		B6FDF1722C8F712F0091D04F /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6FDF1712C8F712F0091D04F /* NetworkService.swift */; };
+		B6FDF1752C8F74350091D04F /* MealViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6FDF1742C8F74350091D04F /* MealViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +23,8 @@
 		B6FDF1612C8F6F2E0091D04F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B6FDF1642C8F6F2E0091D04F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		B6FDF16D2C8F70100091D04F /* Meal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meal.swift; sourceTree = "<group>"; };
+		B6FDF1712C8F712F0091D04F /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		B6FDF1742C8F74350091D04F /* MealViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +58,8 @@
 			isa = PBXGroup;
 			children = (
 				B6FDF16B2C8F6F960091D04F /* App */,
+				B6FDF1702C8F711C0091D04F /* NetworkService */,
+				B6FDF1732C8F74220091D04F /* ViewModel */,
 				B6FDF16F2C8F70140091D04F /* Model */,
 				B6FDF16C2C8F6F9C0091D04F /* View */,
 				B6FDF1612C8F6F2E0091D04F /* Assets.xcassets */,
@@ -92,6 +98,22 @@
 				B6FDF16D2C8F70100091D04F /* Meal.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		B6FDF1702C8F711C0091D04F /* NetworkService */ = {
+			isa = PBXGroup;
+			children = (
+				B6FDF1712C8F712F0091D04F /* NetworkService.swift */,
+			);
+			path = NetworkService;
+			sourceTree = "<group>";
+		};
+		B6FDF1732C8F74220091D04F /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				B6FDF1742C8F74350091D04F /* MealViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -165,7 +187,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				B6FDF1602C8F6F2C0091D04F /* ContentView.swift in Sources */,
+				B6FDF1752C8F74350091D04F /* MealViewModel.swift in Sources */,
 				B6FDF16E2C8F70100091D04F /* Meal.swift in Sources */,
+				B6FDF1722C8F712F0091D04F /* NetworkService.swift in Sources */,
 				B6FDF15E2C8F6F2C0091D04F /* Fetch_MealsApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
