@@ -14,15 +14,18 @@ enum APIError: Error {
 
 extension URLRequest {
     static let allDesserts = URLRequest(url: URL(string: "https://themealdb.com/api/json/v1/1/filter.php?c=Dessert")!)
-    static let dessertById = URLRequest(url: URL(string: "https://themealdb.com/api/json/v1/1/lookup.php?i=")!)
+    static func dessertById(dessertID: String) -> URLRequest {
+        let url = URL(string: "https://themealdb.com/api/json/v1/1/lookup.php?i=\(dessertID)")!
+       return URLRequest(url: url)
+    }
 }
 
-struct APIService {
+struct APIService: Decodable {
    
     static func request<T: Decodable>(urlRequest: URLRequest) async throws -> T {
         let (data, response) = try await URLSession.shared.data(for: urlRequest)
         let statusCode = (response as? HTTPURLResponse)?.statusCode ?? 400
-        
+        print(urlRequest)
         switch statusCode {
         case 200:
             do {

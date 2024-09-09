@@ -7,14 +7,17 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct ListView: View {
     @ObservedObject var mealViewModel = MealViewModel()
     
     var body: some View {
-        VStack {
+        
+        NavigationStack {
             
             List(mealViewModel.meals, id: \.idMeal) { meal in
-                Text(meal.strMeal)
+                NavigationLink(meal.strMeal) {
+                    DetailView(detailViewModel: MealDetailViewModel(mealID: meal.idMeal, mealName: meal.strMeal))
+                }
             }
         }
         .padding()
@@ -22,5 +25,5 @@ struct ContentView: View {
 }
 
 #Preview {
-    ContentView()
+    ListView()
 }
